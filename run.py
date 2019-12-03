@@ -216,4 +216,4 @@ new_events = decoder.predict(z_samples)
 for i in range(0,new_events.shape[1]):
 	new_events[:,i]=new_events[:,i]*max[i]
 
-np.savetxt('ttbar_'+str(lat_dim)+'d_'+str(b)+'_gamma005_N=100k.csv', new_events)
+np.savetxt('B-VAE_events.csv', new_events)
