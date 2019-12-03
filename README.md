@@ -1,6 +1,6 @@
 # DeepEvents
 
-This repository contains the code and trained networks to reproduce the main results of https://arxiv.org/abs/1901.00875.
+This repository contains the code and trained networks to reproduce the main results of https://arxiv.org/abs/1901.00875: a deep generative model that creates events from a complex physical process: ttbar production with MET, METphi and the 4-vectors of up two six final state objects: four jets and up to two leptons.
 
 The script called 'run.py' that is contained in the main directory is the main piece of this repository. The files contained in 'traditional_methods', 'models' and 'results' are auxiliary material in case someone wishes to reproduce or see more plots of all studies in the article above. Here we focus on the model we find to deliver the best performance: the B-VAE trained with a 20-dimensional latent space, B=10**(-6), alpha=1, gamma=0.05. In this README, we will show you how to a) train this model and b) provide you with a pretrained model and show you how to use it. 
 
