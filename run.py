@@ -43,8 +43,8 @@ def sampling(args):
 
 #load toy-model events
 filename = 'ttb.csv'
-twodecay_df = pd.read_csv(filename, sep=' ', header=None)
-data = twodecay_df.values
+ttb_df = pd.read_csv(filename, sep=' ', header=None)
+data = ttb_df.values
 data = data[:,0:26]		
 			
 max = np.empty(26)
@@ -158,7 +158,7 @@ if __name__ == '__main__':
 	lr_limit = 0.001/(2**iterations)
 	history = History()
 	k=0
-	checkpointer = ModelCheckpoint(filepath='new_ttbar_20d_e-6.hdf5', verbose=1, save_best_only=True)
+	checkpointer = ModelCheckpoint(filepath='ttbar_20d_e-6.hdf5', verbose=1, save_best_only=True)
 	opt = Adam(lr=learnrate, beta_1=0.9, beta_2=0.999, epsilon=1e-08, decay=0.0)
 	vae.compile(optimizer=opt, loss=vae_loss)
 
@@ -195,13 +195,11 @@ latent_std = np.sqrt(latent_var)
 np.savetxt('latent_mean_20d_e-6.csv', latent_mean)
 np.savetxt('latent_std_20d_e-6.csv', latent_std)
 filename = 'latent_mean_20d_e-6.csv'
-twodecay_df = pd.read_csv(filename, sep=' ', header=None)
-mean = twodecay_df.values
-print(np.shape(mean))
+means_df = pd.read_csv(filename, sep=' ', header=None)
+mean = means_df.values
 filename = 'latent_std_20d_e-6.csv'
-twodecay_df = pd.read_csv(filename, sep=' ', header=None)
-std = twodecay_df.values
-print(np.shape(std))
+stds_df = pd.read_csv(filename, sep=' ', header=None)
+std = stds_df.values
 lat_dim = 20
 b = 'e-6'
 z_samples = np.empty([1200000,lat_dim])
