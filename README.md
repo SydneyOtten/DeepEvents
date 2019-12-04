@@ -45,3 +45,7 @@ b) Using the pretrained model
 3. Type 'python run.py -w ttbar_20d_e-6.hdf5' into your command line interface.
 
 The expected output is a file containing 1.2 million ttbar events created by the B-VAE within a few minutes.
+
+# Evaluation
+
+If you are interested in the values for the two figures of merit defined in the abovementioned article, place the generated events in the folder 'Evaluation' and type 'python FoM.py' into your CLI. In case the name of the file containing the events you want to evaluate is not 'B-VAE_events.csv', you need to adjust line 152 in FoM.py.
