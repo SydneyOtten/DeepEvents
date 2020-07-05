@@ -8,12 +8,12 @@ The script called 'run.py' that is contained in the main directory is the main p
 
 The script has been tested on Windows 7 and Ubuntu 16.04.
 
-Running the scripts requires recent (Nov 2019) versions of:
-numpy
-scikit-learn
-pandas
-tensorflow
-Keras
+Running the scripts was tested using:
+numpy 1.17.4
+scikit-learn 0.22
+pandas 0.25.3
+tensorflow-gpu 1.14.0
+Keras 2.2.5
 
 # Installation Guide
 
